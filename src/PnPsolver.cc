@@ -52,6 +52,8 @@
 #include <vector>
 #include <cmath>
 #include <opencv2/core/core.hpp>
+
+using namespace cv;
 #include "Thirdparty/DBoW2/DUtils/Random.h"
 #include <algorithm>
 
