@@ -1,0 +1,10 @@
+<launch>
+  <arg name="voc_file" default="$(find ORB_SLAM3)/voc/ORBvoc.txt"/>
+  <arg name="config_file" default="$(find ORB_SLAM3)/config/rgbd.yaml"/>
+
+  <node pkg="ORB_SLAM3" type="RGBD"   name="RGBD" output="screen" args="$(arg voc_file) $(arg config_file)" >
+      <remap from="/camera/rgb/image_raw" to="/carla/ego_vehicle/camera/rgb/front/image_color" />
+      <remap from="/camera/depth_registered/image_raw" to="/carla/ego_vehicle/camera/depth/front/image_depth" />
+  </node>
+
+</launch>
